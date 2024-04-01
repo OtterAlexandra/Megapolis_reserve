@@ -13,8 +13,9 @@ with open('history_mirror.csv', encoding="utf8") as csvfile:
             j -= 1
         reader[j + 1] = key
         count = 1
+    k = 0
     for el in reader:  # выводим первые 4 записи
         print(f'{el["date"]} - {el["username"]} - {el["verdict"]}')
-        count += 1
-        if count == 5:
+        k += 1
+        if k == 4:
             break
